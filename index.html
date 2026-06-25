@@ -1,38 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para: El amor de mi vida❤️</title>
+
+<title>Para el amor de mi vida ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
+    font-family:'Dancing Script', cursive;
     background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
-    margin:0;
-    text-align:center;
+    padding:20px;
+    overflow-x:hidden;
 }
- 
+
+/* Corazones flotando */
+
+.corazon{
+    position:fixed;
+    bottom:-20px;
+    color:#ff4d6d;
+    animation: flotar linear infinite;
+    pointer-events:none;
+    z-index:0;
+}
+
+@keyframes flotar{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
+
 .contenedor{
     background:white;
-    padding:30px;
-    border-radius:20px;
-    max-width:500px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    max-width:800px;
+    width:100%;
+    padding:35px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    font-size:3.5rem;
+    color:#ff4d6d;
+    margin-bottom:20px;
+    text-align:center;
 }
 
 button{
     background:#ff4d6d;
     color:white;
     border:none;
-    padding:15px 30px;
-    font-size:20px;
-    border-radius:12px;
+    padding:20px 35px;
+    font-size:1.8rem;
+    border-radius:20px;
     cursor:pointer;
+    display:block;
+    margin:auto;
+    font-family:'Dancing Script', cursive;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(255,77,109,.4);
 }
 
 button:hover{
@@ -41,14 +89,49 @@ button:hover{
 
 #contenido{
     display:none;
-    margin-top:20px;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 img{
     width:100%;
-    border-radius:15px;
+    border-radius:25px;
+    margin-top:20px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h2{
+    text-align:center;
+    color:#ff4d6d;
+    font-size:2.8rem;
     margin-bottom:15px;
 }
+
+.carta{
+    font-size:1.6rem;
+    line-height:1.8;
+    white-space:pre-line;
+    color:#444;
+}
+
+.firma{
+    text-align:right;
+    margin-top:30px;
+    font-size:2rem;
+    color:#ff4d6d;
+}
+
 </style>
 </head>
 
@@ -56,46 +139,94 @@ img{
 
 <div class="contenedor">
 
-    <h1>❤️ SORPRESITA ❤️</h1>
+<h1>❤️ SORPRESITA ❤️</h1>
 
-    <button onclick="mostrar()">
-        FELICES 3 MESES AMOR DE MI VIDA
-    </button>
+<button onclick="mostrar()">
+    FELICES 3 MESES AMOR DE MI VIDA ❤️
+</button>
 
-    <div id="contenido">
+<div id="contenido">
 
-        <img src="nosotros.jpeg" alt="Nosotros">
+<img src="nosotros.jpeg" alt="Nosotros">
 
-        <h2>Mi amor ❤️</h2>
+<h2>Mi princesa hermosa ❤️</h2>
 
-        <p>
-            Mi princesa hermosa.
-            Antes de enmpezar quiero decir que elegí esta foto porque es la única decente que tenemos, las otras o estamos sin ropa o directamente eres tu roncando JAJAJAJ.
-            ya son 3 meses desde que somos novios y no sé si seas conciente de lo mucho que te amo y sobre todo de lo feliz y mejor persona que me haces cada dia.
-            Son 92 dias desde que dejé de ser tan cobarde y por fin hacer oficial nuestra relación (Sigo pensando que fue poco tiempo "Exagerada" mentiras JAJAJAJA Te amo mi princesa).
-            Son 92 dias en los que cada vez estoy más seguro que eres la mujer de mi vida, la mujer con la que quiero y voy a tener mi familia por algunas pequeñas razones: 
-            - Eres hermosa
-            - Eres MUY inteligente
-            - Eres preciosa
-            - Eres perfecta
-            - Eres cariñosa
-            - Eres independiente
-            - Eres responsable
-            - Eres delicada
-            - Eres dedicada
-            - Eres organizada (Menos con los cables del celular y del computador JAJAJAJA)
-            - Y lo más importante: amas a los perritos tanto como yo y ese detalle ya te convierte en el amor de mi vida.
-            Te amo con todo mi corazón amor mio, felices 3 mesesitos. 
-        </p>
+<div class="carta">
 
-    </div>
+Mi princesa hermosa.
+
+Antes de empezar quiero decir que elegí esta foto porque es la única decente que tenemos, las otras o estamos sin ropa o directamente eres tú roncando JAJAJAJA. ❤️
+
+Ya son 3 meses desde que somos novios y no sé si seas consciente de lo mucho que te amo y sobre todo de lo feliz y mejor persona que me haces cada día.
+
+Son 92 días desde que dejé de ser tan cobarde y por fin hacer oficial nuestra relación. (Sigo pensando que fue poco tiempo "Exagerada"... mentiras JAJAJAJA ❤️).
+
+Son 92 días en los que cada vez estoy más seguro de que eres la mujer de mi vida, la mujer con la que quiero y voy a tener mi familia por algunas pequeñas razones:
+
+• Eres hermosa.
+
+• Eres MUY inteligente.
+
+• Eres preciosa.
+
+• Eres perfecta.
+
+• Eres cariñosa.
+
+• Eres independiente.
+
+• Eres responsable.
+
+• Eres delicada.
+
+• Eres dedicada.
+
+• Eres organizada (menos con los cables del celular y del computador JAJAJAJA ❤️).
+
+• Y lo más importante: amas a los perritos tanto como yo y ese detalle ya te convierte automáticamente en el amor de mi vida.
+
+Gracias por estos tres meses tan hermosos.
+
+Te amo con todo mi corazón, amor mío.
+
+Felices 3 mesesitos. ❤️
+
+</div>
+
+<div class="firma">
+Con amor, tu novio que tanto amas (O eso dices :())❤️
+</div>
+
+</div>
 
 </div>
 
 <script>
+
 function mostrar(){
+
     document.getElementById("contenido").style.display="block";
+
+    document.querySelector("button").style.display="none";
 }
+
+for(let i=0;i<25;i++){
+
+    const corazon=document.createElement("div");
+
+    corazon.innerHTML="❤️";
+
+    corazon.classList.add("corazon");
+
+    corazon.style.left=Math.random()*100+"vw";
+
+    corazon.style.fontSize=(Math.random()*20+15)+"px";
+
+    corazon.style.animationDuration=(Math.random()*8+6)+"s";
+
+    document.body.appendChild(corazon);
+}
+
 </script>
 
 </body>
